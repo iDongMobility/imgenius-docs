@@ -3,8 +3,8 @@ const versions = require('./versions.json');
 module.exports = {
   title: 'imgenius',
   tagline: '让每一个服务/运维商，都成为智慧的团队',
-  url: 'http://userguide.idongmobility.cn/',
-  baseUrl: '/',
+  url: 'https://idongmobility.github.io/',
+  baseUrl: '/imgenius-docs/',
   favicon: 'img/favicon.ico',
   organizationName: 'iDongMobility', // Usually your GitHub org/user name.
   projectName: 'imgenius-docs', // Usually your repo name.  
