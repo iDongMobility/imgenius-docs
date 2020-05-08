@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[33],{167:function(s){s.exports=JSON.parse('{"allTagsPath":"/imgenius-docs/blog/tags","slug":"\u6587\u6863\u6846\u67b6","name":"\u6587\u6863\u6846\u67b6","count":1,"permalink":"/imgenius-docs/blog/tags/\u6587\u6863\u6846\u67b6"}')}}]);
