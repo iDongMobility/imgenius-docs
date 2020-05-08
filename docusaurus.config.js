@@ -4,7 +4,7 @@ module.exports = {
   title: 'imgenius',
   tagline: '让每一个服务/运维商，都成为智慧的团队',
   url: 'https://idongmobility.github.io/',
-  baseUrl: '/imgenius-docs/',
+  baseUrl: '/',
   favicon: 'img/favicon.ico',
   organizationName: 'iDongMobility', // Usually your GitHub org/user name.
   projectName: 'imgenius-docs', // Usually your repo name.  
