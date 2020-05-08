@@ -1,0 +1,609 @@
+<mxGraphModel dx="1480" dy="812" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="600" background="#080808">
+  <root>
+    <object label="" fastTimerScript="    let online = 0;&#xa;    let offline = 0;&#xa;    for (let index = 1; index &lt;= 12; index++) {&#xa;        var objName = &#39;F00&#39; + index;&#xa;        if (index &gt;= 10)&#xa;            objName = &#39;F0&#39; + index;&#xa;        if (asset[objName]) {&#xa;            var status = asset[objName].状态;&#xa;            if (status == &#39;离线&#39;)&#xa;                offline++;&#xa;            else&#xa;                online++;&#xa;        }&#xa;    }&#xa;    assetMag.setRootAttrValue(&#39;online&#39;, online + &#39;&#39;);&#xa;    assetMag.setRootAttrValue(&#39;offline&#39;, offline + &#39;&#39;);" online="0" offline="0" id="0">
+      <mxCell/>
+    </object>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="2" value="在线数量：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="1" vertex="1">
+      <mxGeometry x="18" y="16" width="80" height="33" as="geometry"/>
+    </mxCell>
+    <mxCell id="3" value="状态" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="1" vertex="1">
+      <mxGeometry x="579" y="16" width="55" height="31" as="geometry"/>
+    </mxCell>
+    <mxCell id="6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;fontColor=#FFFFFF;fillColor=#FF1414;" parent="1" vertex="1">
+      <mxGeometry x="647" y="19.5" width="26" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="7" value="故障" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="1" vertex="1">
+      <mxGeometry x="666" y="17" width="55" height="31" as="geometry"/>
+    </mxCell>
+    <mxCell id="10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;fontColor=#FFFFFF;fillColor=#336600;" parent="1" vertex="1">
+      <mxGeometry x="729" y="19.5" width="26" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="11" value="运行" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="1" vertex="1">
+      <mxGeometry x="748" y="17" width="55" height="31" as="geometry"/>
+    </mxCell>
+    <mxCell id="12" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=15;fontColor=#FFFFFF;fillColor=#808080;" parent="1" vertex="1">
+      <mxGeometry x="812" y="19.5" width="26" height="26" as="geometry"/>
+    </mxCell>
+    <mxCell id="13" value="离线" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="1" vertex="1">
+      <mxGeometry x="831" y="17" width="55" height="31" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F002" id="97">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="256" y="60.5" width="170" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="87">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="97" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="88">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="97" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="89" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="97" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="90" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="97" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="91">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="97" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="92">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="97" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" slowTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="93">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="97" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="94">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="97" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="95" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="97" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="96" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="97" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F001" id="98">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="36.5" y="60.5" width="170" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="99">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="98" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;var link = &#39;/Asset/Index?id=&#39; + asset[objName].id;&#xa;console.log(link);&#xa;assetMag.setAttrValue(cell,&#39;link&#39;,link);&#xa;return { &#39;label&#39;: objName };" link="/Asset/Index?id=42451d7a-ccc8-4731-925d-b8a540529601" id="100">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;fontStyle=4" parent="98" vertex="1">
+        <mxGeometry x="89" y="36" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="101" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="98" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="102" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="98" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="103">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="98" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="104">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="98" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="105">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="98" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="106">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="98" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="107" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="98" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="108" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="98" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F003" id="109">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="476" y="60.5" width="170" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="110">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="109" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="111">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="109" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="112" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="109" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="113" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="109" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="114">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="109" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="115">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="109" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="116">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="109" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="117">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="109" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="118" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="109" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="119" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="109" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F004" id="132">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="695.5" y="60.5" width="170" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="133">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="132" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="134">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="132" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="135" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="132" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="136" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="132" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="137">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="132" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="138">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="132" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="139">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="132" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="140">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="132" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="141" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="132" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="142" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="132" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F006" id="143">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="254.5" y="232" width="170" height="169" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="144">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="143" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="145">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="143" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="146" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="143" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="147" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="143" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="148">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="143" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="149">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="143" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="150">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="143" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="151">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="143" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="152" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="143" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="153" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="143" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F005" id="154">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="35" y="232" width="170" height="169" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="155">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="154" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="156">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="154" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="157" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="154" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="158" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="154" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="159">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="154" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="160">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="154" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="161">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="154" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="162">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="154" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="163" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="154" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="164" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="154" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F007" id="165">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="474.5" y="232" width="170" height="169" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="166">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="165" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="167">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="165" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="168" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="165" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="169" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="165" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="170">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="165" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="171">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="165" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="172">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="165" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="173">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="165" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="174" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="165" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="175" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="165" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F008" id="176">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="694" y="232" width="170" height="169" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="177">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="176" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="178">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="176" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="179" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="176" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="180" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="176" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="181">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="176" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="182">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="176" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="183">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="176" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="184">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="176" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="185" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="176" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="186" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="176" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F010" id="187">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="254" y="404.5" width="170" height="169" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="188">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="187" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="189">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="187" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="190" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="187" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="191" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="187" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="192">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="187" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="193">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="187" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="194">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="187" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="195">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="187" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="196" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="187" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="197" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="187" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F009" id="198">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="34.5" y="404.5" width="170" height="169" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="199">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="198" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="200">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="198" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="201" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="198" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="202" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="198" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="203">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="198" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="204">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="198" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="205">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="198" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="206">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="198" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="207" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="198" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="208" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="198" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F011" id="209">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="474" y="404.5" width="170" height="169" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="210">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="209" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="211">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="209" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="212" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="209" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="213" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="209" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="214">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="209" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="215">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="209" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" fastTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="216">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="209" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="217">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="209" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="218" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="209" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="219" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="209" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <object label="" objName="F012" id="220">
+      <mxCell style="group" parent="1" vertex="1" connectable="0">
+        <mxGeometry x="693.5" y="404.5" width="170" height="169" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var fillColor = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        fillColor = &#39;#FF1414&#39;;&#xa;    else if (status == &#39;离线&#39;)&#xa;        fillColor = &#39;#808080&#39;&#xa;    else&#xa;        fillColor = &#39;#336600&#39;&#xa;    return { &#39;fillColor&#39;: fillColor };" id="221">
+      <mxCell style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#336600;fontSize=15;fontColor=#FFFFFF;" parent="220" vertex="1">
+        <mxGeometry width="164" height="164" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp;&amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa;return { &#39;label&#39;: objName };" id="222">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="220" vertex="1">
+        <mxGeometry x="88.5" y="35.5" width="60" height="23" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="223" value="设备利用率：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="220" vertex="1">
+      <mxGeometry x="26" y="138" width="80" height="19" as="geometry"/>
+    </mxCell>
+    <mxCell id="224" value="保养时间：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="220" vertex="1">
+      <mxGeometry x="5" y="113" width="62" height="18" as="geometry"/>
+    </mxCell>
+    <object label="xxxx年xx月xx日" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName,[&#39;保养时间&#39;]);&#xa;    return {&#39;label&#39;:asset[objName].保养时间};" id="225">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="220" vertex="1">
+        <mxGeometry x="54" y="113" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="00%" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);   &#xa; assetMag.init(objName, [&#39;设备利用率&#39;]);&#xa;    let value = asset[objName].设备利用率;&#xa;    value = value * 100+&#39;%&#39;;&#xa;    return { &#39;label&#39;: value };" id="226">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=13;" parent="220" vertex="1">
+        <mxGeometry x="97" y="138" width="43" height="19" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" middleTimerScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);&#xa;assetMag.init(objName, [&#39;状态&#39;]);&#xa;    let status = asset[objName].状态;&#xa;    let value = &#39;0&#39;;&#xa;    let newValue = &#39;0&#39;;&#xa;    if (status == &#39;运行&#39;) {&#xa;        let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 10;&#xa;        if (newValue &gt; 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;    }&#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="227">
+      <mxCell style="shape=mxgraph.pid.valves.ball_valve;whiteSpace=wrap;html=1;strokeColor=#FFFFFF;" parent="220" vertex="1">
+        <mxGeometry x="25" y="9" width="38" height="28" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="&amp;nbsp; &amp;nbsp; &amp;nbsp;" styleScript="var objName = assetMag.getParentAttrValue(cell,&#39;objName&#39;);    &#xa;assetMag.init(objName, [&#39;状态&#39;,&#39;故障信息&#39;]);&#xa;    var status = asset[objName].状态;&#xa;    var faultMsg = &#39;&#39;;&#xa;    if (status == &#39;故障&#39;)&#xa;        faultMsg = asset[objName].故障信息;&#xa;    return { &#39;label&#39;: faultMsg };" id="228">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=4;" parent="220" vertex="1">
+        <mxGeometry x="22.5" y="82" width="116" height="18" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="229" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rounded_frame;dx=10;fillColor=#ffffff;strokeColor=#FFFFFF;" parent="220" vertex="1">
+      <mxGeometry x="15" y="59" width="61" height="8" as="geometry"/>
+    </mxCell>
+    <mxCell id="230" value="" style="line;strokeWidth=4;direction=south;html=1;perimeter=backbonePerimeter;points=[];outlineConnect=0;strokeColor=#FFFFFF;" parent="220" vertex="1">
+      <mxGeometry x="40" y="25" width="10" height="40" as="geometry"/>
+    </mxCell>
+    <mxCell id="231" value="离线数量：" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="1" vertex="1">
+      <mxGeometry x="235" y="14" width="80" height="33" as="geometry"/>
+    </mxCell>
+    <object label="xx" styleScript="var value = assetMag.getRootAttrValue(&#39;online&#39;); &#xa;return { &#39;label&#39;: value };" id="232">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="1" vertex="1">
+        <mxGeometry x="98" y="15" width="48" height="33" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="xx" styleScript="var value = assetMag.getRootAttrValue(&#39;offline&#39;); &#xa;return { &#39;label&#39;: value };" id="233">
+      <mxCell style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontColor=#FFFFFF;fontSize=15;" parent="1" vertex="1">
+        <mxGeometry x="317" y="15" width="48" height="33" as="geometry"/>
+      </mxCell>
+    </object>
+  </root>
+</mxGraphModel>

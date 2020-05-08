@@ -1,0 +1,81 @@
+<mxGraphModel dx="1480" dy="812" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+    <mxCell id="5" value="旋转" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+      <mxGeometry x="90" y="315" width="60" height="20" as="geometry"/>
+    </mxCell>
+    <object label="" fastTimerScript="let value = 0;       &#xa; let state = graph.getView().getState(cell);&#xa;        if (state != null) {&#xa;            value = state.style[mxConstants.STYLE_ROTATION] || value;&#xa;        }&#xa;        newValue = Number(value) + 5;&#xa;        if (newValue &gt;= 360)&#xa;            newValue = newValue - 360;&#xa;        newValue += &#39;&#39;;&#xa;   &#xa;    graph.setCellStyles(mxConstants.STYLE_ROTATION, newValue, [cell]);" id="7">
+      <mxCell style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.spiral_stairs;" parent="1" vertex="1">
+        <mxGeometry x="200" y="270" width="110" height="110" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="" middleTimerScript="let visible = cell.isVisible();&#xa;cell.setVisible(!visible)" id="8">
+      <mxCell style="shape=mxgraph.networks.user_female;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+        <mxGeometry x="230" y="444" width="50" height="120" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="9" value="显示/隐藏" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+      <mxGeometry x="90" y="504" width="60" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="11" value="样式" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+      <mxGeometry x="100" y="75" width="60" height="20" as="geometry"/>
+    </mxCell>
+    <object label="改变样式" clickScript="var newValue = &#39;rounded=1;whiteSpace=wrap;html=1;fillColor=#D633FF;dashed=1;dashPattern=1 2;strokeWidth=5;arcSize=31;shadow=1;glass=1;comic=1;gradientColor=#A061FF;gradientDirection=east&#39;;&#xa;let model = graph.getModel();&#xa;let cell19 = model.getCell(&#39;19&#39;);&#xa;graph.setCellStyle(newValue , [cell19]);&#xa;" tooltipsScript="return &#39;改变样式的提示信息&#39;" id="17">
+      <mxCell style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#dddddd;align=center;fontSize=16;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxGeometry x="540" y="75" width="80" height="40" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="清空样式" clickScript="var newValue = &#39;rounded=0;whiteSpace=wrap;html=1;&#39;;&#xa;let model = graph.getModel();&#xa;let cell19 = model.getCell(&#39;19&#39;);&#xa;graph.setCellStyle(newValue , [cell19]);&#xa;" id="18">
+      <mxCell style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#dddddd;align=center;fontSize=16;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxGeometry x="650" y="75" width="80" height="40" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="19" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+      <mxGeometry x="210" y="65" width="120" height="60" as="geometry"/>
+    </mxCell>
+    <mxCell id="20" value="文本" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+      <mxGeometry x="100" y="180" width="40" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="21" value="xxxxxx" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+      <mxGeometry x="215" y="180" width="40" height="20" as="geometry"/>
+    </mxCell>
+    <mxCell id="22" value="xxxxx" style="rounded=0;whiteSpace=wrap;html=1;fontColor=#FFE045;align=center;fontSize=15;fontFamily=Times New Roman;" parent="1" vertex="1">
+      <mxGeometry x="310" y="160" width="120" height="60" as="geometry"/>
+    </mxCell>
+    <object label="改变文本" clickScript="let model = graph.getModel();&#xa;let cell21 = model.getCell(&#39;21&#39;);&#xa;let cell22 = model.getCell(&#39;22&#39;);&#xa;graph.cellLabelChanged(cell21, &quot;这是一个文本&quot;);&#xa;graph.cellLabelChanged(cell22, &quot;这是一个文本框&quot;);" id="23">
+      <mxCell style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#dddddd;align=center;fontSize=16;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxGeometry x="540" y="180" width="80" height="40" as="geometry"/>
+      </mxCell>
+    </object>
+    <object label="改变文本" clickScript="let model = graph.getModel();&#xa;let cell21 = model.getCell(&#39;21&#39;);&#xa;let cell22 = model.getCell(&#39;22&#39;);&#xa;graph.cellLabelChanged(cell21, &quot;内容变化了&quot;);&#xa;graph.cellLabelChanged(cell22, &quot;内容也变化了&quot;);" id="25">
+      <mxCell style="html=1;shadow=0;dashed=0;shape=mxgraph.bootstrap.rrect;rSize=5;strokeColor=#dddddd;align=center;fontSize=16;whiteSpace=wrap;" parent="1" vertex="1">
+        <mxGeometry x="650" y="180" width="80" height="40" as="geometry"/>
+      </mxCell>
+    </object>
+    <mxCell id="26" value="" style="endArrow=none;html=1;fontFamily=Times New Roman;fontSize=15;fontColor=#FFE045;dashed=1;" parent="1" edge="1">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="60" y="140" as="sourcePoint"/>
+        <mxPoint x="730" y="140" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="27" value="" style="endArrow=none;html=1;fontFamily=Times New Roman;fontSize=15;fontColor=#FFE045;dashed=1;" parent="1" edge="1">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="60" y="250" as="sourcePoint"/>
+        <mxPoint x="730" y="250" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="28" value="" style="endArrow=none;html=1;fontFamily=Times New Roman;fontSize=15;fontColor=#FFE045;dashed=1;" parent="1" edge="1">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="60" y="410" as="sourcePoint"/>
+        <mxPoint x="730" y="410" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="29" value="" style="endArrow=none;html=1;fontFamily=Times New Roman;fontSize=15;fontColor=#FFE045;dashed=1;" parent="1" edge="1">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="60" y="584" as="sourcePoint"/>
+        <mxPoint x="730" y="584" as="targetPoint"/>
+      </mxGeometry>
+    </mxCell>
+  </root>
+</mxGraphModel>
