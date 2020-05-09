@@ -1,8 +1,11 @@
-    RabbitMQ服务拓展开发是基于 Node.js 平台的下的express开发框架搭载的服务。主要用于捕捉流程节点前后的作业组信息，以及对其逻辑的处理及变化
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+   RabbitMQ服务拓展开发是基于 Node.js 平台的下的express开发框架搭载的服务。主要用于捕捉流程节点前后的作业组信息，以及对其逻辑的处理及变化
 
 ## 程序目录
 
-![item1](/static/docimg/RabbitMQ1.png) 
+<img alt=" " src={useBaseUrl('docimg/RabbitMQ1.png')} /> 
 
 #
 
@@ -120,16 +123,16 @@ var ReadConfig = function (path, _callback) {
 
 * 打开cmd,输入程序路径后，输入node app.js
 
-![item2](/static/docimg/RabbitMQ2.png)
+<img alt=" " src={useBaseUrl('docimg/RabbitMQ2.png')} />
 
 * 成功打开后
 
-![item3](/static/docimg/RabbitMQ3.png)
+<img alt=" " src={useBaseUrl('docimg/RabbitMQ3.png')} />
 
 * 示例中的逻辑是，id为**e4e81f3d-9ce5-458b-84b8-36faab6ee817**且流程名为 **维修保养** 的流程节点结束后，获取作业组的所有属性
 
-![item4](/static/docimg/RabbitMQ4.jpg)
+<img alt=" " src={useBaseUrl('docimg/RabbitMQ4.jpg')} />
 
 * 终端**维修保养**结束后，完成并同步，看到控制台出现结果
 
-![item4](/static/docimg/RabbitMQ5.png)
+<img alt=" " src={useBaseUrl('docimg/RabbitMQ5.png')} />

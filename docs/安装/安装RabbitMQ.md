@@ -1,16 +1,19 @@
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 ## 安装Erlang环境
 
 * 运行“otp_win64_21.3.exe”安装Erlang环境。（注：如果自行选择了安装路径，请确保安装路径无中文字符，如果已经安装忽略此步）
 
-  ![rm](/static/docimg/RM1.png)
+  <img alt=" " src={useBaseUrl('docimg/RM1.png')} />
 
 ## 安装 RabbitMQ
 
 * 运行“rabbitmq-server-3.7.14.exe”安装RabbitMQ。（注：如果自行选择了安装路径，请确保安装路径无中文字符，如果已经安装忽略此步，已经安装的会有如下图的提示，点击确定继续）
 
-  ![rm](/static/docimg/RM2.png)
+  <img alt=" " src={useBaseUrl('docimg/RM2.png')} />
   
-  ![rm](/static/docimg/RM3.png)
+  <img alt=" " src={useBaseUrl('docimg/RM3.png')} />
 
 ## 设置RabbitMQ
 

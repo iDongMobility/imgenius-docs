@@ -156,7 +156,7 @@ module.exports = {
           // Please change this to your repo.
           editUrl:
             'https://github.com/iDongMobility/imgenius-docs/edit/master/',
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,          
         },
         blog: {

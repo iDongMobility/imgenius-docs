@@ -1,10 +1,13 @@
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 **imgenius系统使用MongoDB来承担文件服务器和内容服务器的组件角色， MongoDB是一个基于分布式文件存储的数据库。** 以4.0版本为例，安装如下：
 
 * 运行“mongodb-win32-x86_64-2008plus-ssl-4.0.8-signed.msi”安装MongoDB。（注：如果自行选择了安装路径，请确保安装路径无中文字符）
 
 * Data（数据存盘路径）文件夹和log（日志存盘路径）文件夹会在安装时按照自己配置自动创建。
 
-   ![mongo](/static/docimg/mongodb.png)
+   <img alt=" " src={useBaseUrl('docimg/mongodb.png')} />
 
 **注：以下内容，非生产环境可忽略。**
 
@@ -47,19 +50,19 @@
 
 1. 新打开一个cmd，输入net stop MongoDB，停止服务。
 
-   ![mongo](/static/docimg/mongodb1.png)
+   <img alt=" " src={useBaseUrl('docimg/mongodb1.png')} />
 
 2. 打开安装路径bin目录下的“mongod.cfg”文件，将#security:的注释去掉，然后添加authorization: enabled #注意authorization前面要有两个空格，如图：
 
-   ![mongo](/static/docimg/mongodb2.png)
+   <img alt=" " src={useBaseUrl('docimg/mongodb2.png')} />
 
 3. 回到cmd，输入net start MongoDB，启动服务
 
-   ![mongo](/static/docimg/mongodb3.png)
+   <img alt=" " src={useBaseUrl('docimg/mongodb3.png')} />
 
 4. 这时候就需要输入db.auth('admin','admin+iDong')启用auth认证，如图：
 
-   ![mongo](/static/docimg/mongodb4.png)
+   <img alt=" " src={useBaseUrl('docimg/mongodb4.png')} />
 
    会看到返回的值为1，这就表示启动成功了。
 
@@ -70,7 +73,7 @@
 
 * 查看服务是否启动，如图即安装成功：
 
-  ![mongo](/static/docimg/mongodb5.png)
+  <img alt=" " src={useBaseUrl('docimg/mongodb5.png')} />
 
 
 **附：**

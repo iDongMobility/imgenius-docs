@@ -1,3 +1,6 @@
+
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 ## 工具下载
 [nssm](http://www.nssm.cc/download)可以把`nodejs`程序配置成`windows服务`，程序异常时可以自动重新启动
 ## 使用方法
@@ -8,7 +11,7 @@
     nssm install <servicename>
     ```
 
-    ![nssm](/static/docimg/nssm服务1.png)
+    <img alt=" " src={useBaseUrl('docimg/nssm服务1.png')} />
 * `Application`选项卡
     * `Path`
         `nodejs`安装目录下`node.exe`，如`C:\Program Files\nodejs\node.exe`
@@ -19,7 +22,7 @@
 
 * `Detail`选项卡
     
-    ![nssm](/static/docimg/nssm服务2.png)
+    <img alt=" " src={useBaseUrl('docimg/nssm服务2.png')} />
     * `Display name`
         服务显示名，如`iDong CustomKPI Service`
     * `Description`
