@@ -1,4 +1,6 @@
 # imgenius 文档
+[![Build Status](https://img.shields.io/travis/iDongMobility/imgenius-docs.svg?style=flat)](https://travis-ci.org/iDongMobility/imgenius-docs)
+[![Join the chat at https://gitter.im/iDongMobility/imgenius-docs](https://img.shields.io/gitter/room/iDongMobility/imgenius-docs.svg?style=flat)](https://gitter.im/iDongMobility/imgenius-docs?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 欢迎使用艾动科技imgenius的开源文档，参与开源不仅仅是提供更新，它也让我们知道何时出现问题。请查看此自述文件以了解如何帮助参与撰写本文档。
 
