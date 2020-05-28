@@ -100,31 +100,35 @@ PDA需要支持OTG功能，部分机型需要手动开启，并且超过一定�
   * 将公钥证书和私钥合并成一个PFX格式的证书文件(需要使用pvk2pfx.exe工具)，输入：
     `pvk2pfx -pvk test.pvk -spc lqtest.spc -pfx test.pfx`
 
+* 全部命令如图：
+
+  <img alt=" " src={useBaseUrl('docimg/zs6.png')} />
+
 * 然后再进入iis导入.pfx证书即可，密码一栏不填
 
-  ![证书](/static/docimg/zs4.png)
+  <img alt=" " src={useBaseUrl('docimg/zs4.png')} />
 
 * 最后将网站设为https
-  ![证书](/static/docimg/zs5.png)
+  <img alt=" " src={useBaseUrl('docimg/zs5.png')} />
 
 * 完成后即可通过`https://服务器ip地址`的方式来访问到EOC，从而使用眼镜远程指导功能了。
 
-  ![证书](/static/docimg/zs3.png)
+  <img alt=" " src={useBaseUrl('docimg/zs3.png')} />
 
 #### 其他可用办法
 
 * 首先查看一下iis中有无服务器证书，点击根目录，点击服务器证书，可查看。
 
-  ![证书](/static/docimg/zs.png)
+  <img alt=" " src={useBaseUrl('docimg/zs.png')} />
 
 * 当iis中有可选证书时
   * 首先在服务器上打开iis管理器，左侧根目录下点击网站，任意选择一个已部署的网站，在右侧操作栏点击添加网站，如图：
 
-    ![证书](/static/docimg/zs1.png)
+    <img alt=" " src={useBaseUrl('docimg/zs1.png')} />
 
   * 在弹出的添加网站窗口中填写选择相关信息，网站名称自定义，应用程序池选择DefaultAppPool，物理路径为`C:\inetpub\wwwroot`,绑定类型选择https，SSL证书选择IIS，点击确定，网站添加成功。
 
-    ![证书](/static/docimg/zs.png)
+    <img alt=" " src={useBaseUrl('docimg/zs2.png')} />
 
 * 当ssl证书中没有选择项时
   * 可点击iis根目录，找到服务器证书，双击进入后，在右侧操作中选中创建自签名证书，填写信息，确定，就创建了一个服务器证书。
