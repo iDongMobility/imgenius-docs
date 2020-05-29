@@ -86,7 +86,7 @@ PDA需要支持OTG功能，部分机型需要手动开启，并且超过一定�
 必须要拥有一个域名。
 :::warning 注意
 
-* 通过阿里云，可以申请到免费的SSL证书。首先要登录到阿里的SSL管理平台，购买免费的云盾证书服务，[云盾牌服务购买地址](https://common-buy.aliyun.com/?spm=5176.7968328.1266638..25d31232mel5kE&commodityCode=cas&aly_as=4Fp1KTg6D#/buy)。注意需要注册并通过实名认证的阿里云账号。然后选择如图：
+* 通过阿里云，可以申请到免费的SSL证书。首先要登录到阿里的SSL管理平台，购买免费的云盾证书服务：[云盾牌服务购买地址](https://common-buy.aliyun.com/?spm=5176.7968328.1266638..25d31232mel5kE&commodityCode=cas&aly_as=4Fp1KTg6D#/buy)。注意需要注册并通过实名认证的阿里云账号。然后选择如图：
 
   <img alt=" " src={useBaseUrl('docimg/zhengshu1.png')} />
 
