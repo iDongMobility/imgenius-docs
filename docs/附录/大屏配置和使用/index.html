@@ -17,25 +17,25 @@
 <link rel="stylesheet" href="/styles.3678f31e.css">
 
 
-<link rel="preload" href="/styles.6fe1216a.js" as="script">
+<link rel="preload" href="/styles.c1348afa.js" as="script">
 
-<link rel="preload" href="/runtime~main.948bb361.js" as="script">
+<link rel="preload" href="/runtime~main.6e2cd724.js" as="script">
 
-<link rel="preload" href="/main.8c472e3d.js" as="script">
+<link rel="preload" href="/main.b5783b23.js" as="script">
 
-<link rel="preload" href="/1.9f441c29.js" as="script">
+<link rel="preload" href="/1.89529c59.js" as="script">
 
-<link rel="preload" href="/2.4c632ab4.js" as="script">
+<link rel="preload" href="/2.9c2aa02e.js" as="script">
 
-<link rel="preload" href="/3.169e708e.js" as="script">
+<link rel="preload" href="/3.eea50cc8.js" as="script">
 
-<link rel="preload" href="/1be78505.26fc7579.js" as="script">
+<link rel="preload" href="/1be78505.c1723e54.js" as="script">
 
 <link rel="preload" href="/20ac7829.2040527c.js" as="script">
 
-<link rel="preload" href="/17896441.f8cd7469.js" as="script">
+<link rel="preload" href="/17896441.d9bf6d2c.js" as="script">
 
-<link rel="preload" href="/25af35df.5c3442c2.js" as="script">
+<link rel="preload" href="/25af35df.0b2f752e.js" as="script">
 
 </head>
 <body>
@@ -45,25 +45,25 @@
 元素为对象：ID 为自定义面板 ID（ID 是系统自动生成，需要在 mongodb 中查询，工程人员不用写 ID）；DisplayName 为大屏菜单显示名称；Icon 为菜单图标；PanelName 为面板名称（必须写，用名称获取面板信息）。</p><p> 【<strong>IsShowName</strong>】大屏导航是否显示名称。</p><p> 【<strong>IsShowIcon</strong>】大屏导航是否显示图标。</p><p> 【<strong>LeftWidth</strong>】大屏导航宽度。</p><p> 【<strong>DataUpdateTime</strong>】数据更新间隔时间，单位为分钟。</p><p> 【<strong>PageSwitchingTime</strong>】页面切换间隔时间，单位为秒。 </p></li><li><p>如果一个大屏上需要配置多个自定义面板切换播放（最多支持 3 个自定义面板），则修改【LeftNavigation】即可，如：</p><p>【<strong>config.json</strong>】样例： </p><div class="mdxCodeBlock_iHAB"><div class="codeBlockContent_32p_"><button type="button" aria-label="Copy code to clipboard" class="copyButton_1BYj">Copy</button><div tabindex="0" class="prism-code language-undefined codeBlock_19pQ"><div class="codeBlockLines_2n9r" style="color:#bfc7d5;background-color:#292d3e"><div class="token-line" style="color:#bfc7d5"><span class="token plain">{</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;LeftNavigation&quot;: [</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">{</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;DisplayName&quot;: &quot;面板一&quot;,</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;Icon&quot;: &quot;font-idong icon-ServiceProject-idong&quot;, &quot;PanelName&quot;: &quot;面板一&quot;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">},</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">{</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;DisplayName&quot;: &quot;面板二&quot;,</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;Icon&quot;: &quot;font-idong icon-ServiceProject-idong&quot;, &quot;PanelName&quot;: &quot;面板二&quot;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">},</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">{</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;DisplayName&quot;: &quot;面板三&quot;,</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;Icon&quot;: &quot;font-idong icon-ServiceProject-idong&quot;, &quot;PanelName&quot;: &quot;面板三&quot;</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">}</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">],</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;IsShowName&quot;: true, &quot;IsShowIcon&quot;: true, &quot;LeftWidth&quot;: 100,</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;DataUpdateTime&quot;: 2,</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">&quot;PageSwitchingTime&quot;: 5</span></div><div class="token-line" style="color:#bfc7d5"><span class="token plain">}</span></div></div></div></div></div></li></ul></li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="imfigure看板客户端连接测试"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#imfigure看板客户端连接测试" title="Direct link to heading">#</a>imFigure看板客户端连接测试</h2><ul><li><p>以上配置完成后，再次在大屏终端打开安装好的 imFigure 应用程序，点击测试连接按钮，如果显示连接成功，则面板授权成功，接着可以点击进入按钮， 则可以输入用户密码登录到面板界面，如配置正确，则会显示您配置好的自定义面板页面，如果显示错误，则需要检查配置文件【config.json】是否正确。如图：</p><img alt=" " src="/docimg/大屏21.png"><img alt=" " src="/docimg/大屏22.png"><img alt=" " src="/docimg/大屏23.png"></li><li><p>如有错误，检查以上配置是否正确</p><img alt=" " src="/docimg/大屏24.png"></li></ul></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/iDongMobility/imgenius-docs/edit/master/versioned_docs/version-3.8.2/附录/大屏配置和使用.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-05-09T03:52:34.000Z" class="docLastUpdatedAt_1sqk">5/9/2020</time></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/附录/软件和应用升级"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« 软件和应用升级</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/附录/作业树模板配置和使用"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">作业树模板配置和使用 »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#软件安装" class="contents__link">软件安装</a></li><li><a href="#imfigure看板客户端授权" class="contents__link">imFigure看板客户端授权</a></li><li><a href="#自定义面板配置" class="contents__link">自定义面板配置</a></li><li><a href="#imfigure看板客户端连接测试" class="contents__link">imFigure看板客户端连接测试</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">文档</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/安装/系统要求">安装</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/用户使用手册/网页端/登录">用户使用手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统配置手册/授权管理/授权管理">系统配置手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统维护指南/运行监控和维护">系统维护指南</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统扩展指南/主页定制扩展开发">系统扩展指南</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">社区</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://gitter.im/iDongMobility/imgenius-docs">Gitter</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://weibo.com/idongmobility">微博</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://mp.weixin.qq.com/s/eLjZg1xII3Zchg00Z44ZCQ">微信</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/idong-mobility-technologies/">LinkedIn</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">更多</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/clients.html">客户故事</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/about.html">联系我们</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 上海艾动信息科技有限公司 Built with Docusaurus.</div></div></div></footer>
 </div>
 
-<script src="/styles.6fe1216a.js"></script>
+<script src="/styles.c1348afa.js"></script>
 
-<script src="/runtime~main.948bb361.js"></script>
+<script src="/runtime~main.6e2cd724.js"></script>
 
-<script src="/main.8c472e3d.js"></script>
+<script src="/main.b5783b23.js"></script>
 
-<script src="/1.9f441c29.js"></script>
+<script src="/1.89529c59.js"></script>
 
-<script src="/2.4c632ab4.js"></script>
+<script src="/2.9c2aa02e.js"></script>
 
-<script src="/3.169e708e.js"></script>
+<script src="/3.eea50cc8.js"></script>
 
-<script src="/1be78505.26fc7579.js"></script>
+<script src="/1be78505.c1723e54.js"></script>
 
 <script src="/20ac7829.2040527c.js"></script>
 
-<script src="/17896441.f8cd7469.js"></script>
+<script src="/17896441.d9bf6d2c.js"></script>
 
-<script src="/25af35df.5c3442c2.js"></script>
+<script src="/25af35df.0b2f752e.js"></script>
 
 
 </body>
