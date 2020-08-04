@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[127],{266:function(n){n.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"inner-source","name":"innersource","count":1,"permalink":"/blog/tags/inner-source"}')}}]);
