@@ -13,7 +13,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@master # 获取master代码
         with:
           persist-credentials: false
 
@@ -31,4 +31,4 @@ jobs:
           access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
       
       - name: cp files to aliyun oss
-        run: ossutil cp -rf .imgenius-docs/build oss://userguide-idongmobility-cn
+        run: ossutil cp -rf build oss://userguide-idongmobility-cn
