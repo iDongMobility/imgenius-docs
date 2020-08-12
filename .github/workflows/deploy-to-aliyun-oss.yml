@@ -1,0 +1,34 @@
+name: deploy to aliyun oss
+
+# 触发条件：在 push 到 master 分支后
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: yarn install
+        run: yarn install 
+
+      - name: yarn build
+        run:  yarn build
+        
+      - name: setup ossutil           
+        uses: manyuanrong/setup-ossutil@master
+        with:
+          endpoint: oss-cn-beijing.aliyuncs.com
+          access-key-id: ${{ secrets.OSS_KEY_ID }}
+          access-key-secret: ${{ secrets.OSS_KEY_SECRET }}
+      
+      - name: cp files to aliyun oss
+        run: ossutil cp -rf .imgenius-docs/build oss://userguide-idongmobility-cn
