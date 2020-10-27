@@ -38,6 +38,7 @@ This command starts a local development server and open up a browser window. Mos
 * 除在描述特定步骤时，尽量少用有序列表。
 * 文字描述为主，截图或动画为辅，能用文字描述清楚的可不用截图。
 * 文档中的图片和附件请分别放到“static\docimg”和“static\docattachment”目录下。
+* “static\docimg”和“static\docattachment”目录下的图片和文件禁止删除和替换，如果新版本这些文件发生变化，请直接添加新文件。
 * “versions.json”文件内容，“versioned_sidebars”和“versioned_docs”目录下内容是通过以下命令生成，请不要修改。
 
     ``` cmd
