@@ -14,6 +14,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 3.在使用模板显示查看作业组信息时，会通过通配符去替换单元格信息。
 
 4.当指定的标签不存在时，用户可以替换成指定的字符串
+
   a.作业组模板替换中可以增加字符串类型的作业组属性“$ValueOnNoExist”，作为指定要替换的字符串。
 
   b.项目模板替换中可以增加字符串类型的项目属性“$ValueOnNoExist”，作为指定要替换的字符串。
@@ -21,6 +22,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   c.如果不指定该属性“$ValueOnNoExist”的值，则标签不存在时，替换成空字符串【""】。
 
 5.当指定的标签未完成时，用户替换成指定的字符串。
+
  a.作业组模板替换中可以增加字符串类型的作业组属性“$ValueOnUnCompleted”，作为指定要替换的字符串。
 
  b.项目模板替换中可以增加字符串类型的项目属性“$ValueOnUnCompleted”，作为指定要替换的字符串。
