@@ -25,4 +25,4 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
  b.项目模板替换中可以增加字符串类型的项目属性“$ValueOnUnCompleted”，作为指定要替换的字符串。
 
- c.如果不指定该属性“$ValueOnUnCompleted”的值，则标签未完成时，替换成空字符串【""】456123。
+ c.如果不指定该属性“$ValueOnUnCompleted”的值，则标签未完成时，替换成空字符串【""】。
