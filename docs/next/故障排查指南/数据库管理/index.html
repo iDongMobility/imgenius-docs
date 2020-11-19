@@ -19,23 +19,23 @@
 
 <link rel="preload" href="/styles.62b03a7b.js" as="script">
 
-<link rel="preload" href="/runtime~main.3c914037.js" as="script">
+<link rel="preload" href="/runtime~main.ce592006.js" as="script">
 
 <link rel="preload" href="/main.1a29efea.js" as="script">
 
-<link rel="preload" href="/1.292e7a8f.js" as="script">
+<link rel="preload" href="/1.9d06574e.js" as="script">
 
-<link rel="preload" href="/2.cd5d9ad0.js" as="script">
+<link rel="preload" href="/2.76031fbb.js" as="script">
 
-<link rel="preload" href="/3.996779fa.js" as="script">
+<link rel="preload" href="/3.0bf4cd17.js" as="script">
 
-<link rel="preload" href="/1be78505.42d76273.js" as="script">
+<link rel="preload" href="/1be78505.d8f2e4b5.js" as="script">
 
 <link rel="preload" href="/c6c6e257.b3d94637.js" as="script">
 
-<link rel="preload" href="/17896441.b0eee756.js" as="script">
+<link rel="preload" href="/17896441.2f9c9176.js" as="script">
 
-<link rel="preload" href="/9ae48810.1ee1dff2.js" as="script">
+<link rel="preload" href="/9ae48810.ea4c4864.js" as="script">
 
 </head>
 <body>
@@ -56,28 +56,29 @@ DBCC DBREINDEX(&#x27;Table&#x27;&#x27;)
 1、进入Microsoft SQL Server Management Studio，在数据库下选中imgenius应用数据库，右键菜单选择属性，在数据库属性左侧选择页内选择文件
 2、点击自动增长栏 按钮，设置最大文件大小为限制文件增长，数值设定为稍大于当前文件大小（如当前为980MB，则最大文件大小限制为1000MB），确定完成设置
 3、在数据库文件页单击添加，按照已有格式分别添加行数据和日志文件，文件路径设置为空间较大的目标磁盘，文件名按已有格式区别命名
-4、可对新建文件重复步骤2</p></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/iDongMobility/imgenius-docs/edit/master/docs/故障排查指南/数据库管理.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-11-18T09:02:16.000Z" class="docLastUpdatedAt_1sqk">11/18/2020</time></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/next/故障排查指南/后台及Restful API"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« 后台及Restful API</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/next/故障排查指南/其它"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">其它 »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#数据库连接失败" class="contents__link">数据库连接失败</a></li><li><a href="#sqlserver-重建索引前后对比" class="contents__link">SQLServer 重建索引前后对比</a></li><li><a href="#清除指定id的归档作业组" class="contents__link">清除指定ID的归档作业组</a></li><li><a href="#sql-server-数据库中ldf日志文件怎么清理" class="contents__link">SQL Server 数据库中ldf日志文件怎么清理</a></li><li><a href="#sqlserver存储文件转移" class="contents__link">SQLServer存储文件转移</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">文档</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/安装/系统要求">安装</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/用户使用手册/网页端/登录">用户使用手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统配置手册/授权管理/授权管理">系统配置手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统维护指南/运行监控和维护">系统维护指南</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统扩展指南/主页定制扩展开发">系统扩展指南</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">社区</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://gitter.im/iDongMobility/imgenius-docs">Gitter</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://weibo.com/idongmobility">微博</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://mp.weixin.qq.com/s/eLjZg1xII3Zchg00Z44ZCQ">微信</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/idong-mobility-technologies/">LinkedIn</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">更多</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/clients.html">客户故事</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/about.html">联系我们</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 上海艾动信息科技有限公司 Built with Docusaurus.</div></div></div></footer>
+4、可对新建文件重复步骤2</p><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="误操作数据库内表补救办法"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#误操作数据库内表补救办法" title="Direct link to heading">#</a>误操作数据库内表补救办法</h2><p><a href="https://blog.csdn.net/dba_huangzj/article/details/8491327">https://blog.csdn.net/dba_huangzj/article/details/8491327</a>
+<a href="https://blog.csdn.net/happymagic/article/details/79530342">https://blog.csdn.net/happymagic/article/details/79530342</a></p></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/iDongMobility/imgenius-docs/edit/master/docs/故障排查指南/数据库管理.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-11-19T09:16:27.000Z" class="docLastUpdatedAt_1sqk">11/19/2020</time></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/next/故障排查指南/后台及Restful API"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« 后台及Restful API</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/next/故障排查指南/其它"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">其它 »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#数据库连接失败" class="contents__link">数据库连接失败</a></li><li><a href="#sqlserver-重建索引前后对比" class="contents__link">SQLServer 重建索引前后对比</a></li><li><a href="#清除指定id的归档作业组" class="contents__link">清除指定ID的归档作业组</a></li><li><a href="#sql-server-数据库中ldf日志文件怎么清理" class="contents__link">SQL Server 数据库中ldf日志文件怎么清理</a></li><li><a href="#sqlserver存储文件转移" class="contents__link">SQLServer存储文件转移</a></li><li><a href="#误操作数据库内表补救办法" class="contents__link">误操作数据库内表补救办法</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">文档</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/安装/系统要求">安装</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/用户使用手册/网页端/登录">用户使用手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统配置手册/授权管理/授权管理">系统配置手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统维护指南/运行监控和维护">系统维护指南</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统扩展指南/主页定制扩展开发">系统扩展指南</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">社区</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://gitter.im/iDongMobility/imgenius-docs">Gitter</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://weibo.com/idongmobility">微博</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://mp.weixin.qq.com/s/eLjZg1xII3Zchg00Z44ZCQ">微信</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/idong-mobility-technologies/">LinkedIn</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">更多</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/clients.html">客户故事</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/about.html">联系我们</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 上海艾动信息科技有限公司 Built with Docusaurus.</div></div></div></footer>
 </div>
 
 <script src="/styles.62b03a7b.js"></script>
 
-<script src="/runtime~main.3c914037.js"></script>
+<script src="/runtime~main.ce592006.js"></script>
 
 <script src="/main.1a29efea.js"></script>
 
-<script src="/1.292e7a8f.js"></script>
+<script src="/1.9d06574e.js"></script>
 
-<script src="/2.cd5d9ad0.js"></script>
+<script src="/2.76031fbb.js"></script>
 
-<script src="/3.996779fa.js"></script>
+<script src="/3.0bf4cd17.js"></script>
 
-<script src="/1be78505.42d76273.js"></script>
+<script src="/1be78505.d8f2e4b5.js"></script>
 
 <script src="/c6c6e257.b3d94637.js"></script>
 
-<script src="/17896441.b0eee756.js"></script>
+<script src="/17896441.2f9c9176.js"></script>
 
-<script src="/9ae48810.1ee1dff2.js"></script>
+<script src="/9ae48810.ea4c4864.js"></script>
 
 
 </body>
