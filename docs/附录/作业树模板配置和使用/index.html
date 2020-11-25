@@ -17,25 +17,25 @@
 <link rel="stylesheet" href="/styles.3678f31e.css">
 
 
-<link rel="preload" href="/styles.62b03a7b.js" as="script">
+<link rel="preload" href="/styles.1d898ef2.js" as="script">
 
-<link rel="preload" href="/runtime~main.ce592006.js" as="script">
+<link rel="preload" href="/runtime~main.10b313b1.js" as="script">
 
-<link rel="preload" href="/main.1a29efea.js" as="script">
+<link rel="preload" href="/main.f1372f03.js" as="script">
 
-<link rel="preload" href="/1.9d06574e.js" as="script">
+<link rel="preload" href="/1.1e5ad6df.js" as="script">
 
-<link rel="preload" href="/2.76031fbb.js" as="script">
+<link rel="preload" href="/2.d851764c.js" as="script">
 
-<link rel="preload" href="/3.0bf4cd17.js" as="script">
+<link rel="preload" href="/3.4a2777ac.js" as="script">
 
-<link rel="preload" href="/1be78505.d8f2e4b5.js" as="script">
+<link rel="preload" href="/1be78505.02a74dd6.js" as="script">
 
 <link rel="preload" href="/20ac7829.865c86bc.js" as="script">
 
-<link rel="preload" href="/17896441.2f9c9176.js" as="script">
+<link rel="preload" href="/17896441.24537d4e.js" as="script">
 
-<link rel="preload" href="/813977c5.e060f67a.js" as="script">
+<link rel="preload" href="/813977c5.b0f7a5fc.js" as="script">
 
 </head>
 <body>
@@ -45,25 +45,25 @@
 jsonstring的值】</p><p><code>$im.tg.i.作业(项)1.value|[0]json_json|属性1</code> 【作业(项)1的作业值为json数组，第一条数据下json_json也是json格式，显示作业1作业值的第一条json_json下的属性1】</p><h3><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="注意"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#注意" title="Direct link to heading">#</a>注意</h3><ul><li><p>作业组属性和作业项的数据类型为Json时，将以原生的数据字符串进行替换。如果是文件类型，当第一个文件为图片时直接显示图片，否则以原生的数据字符串显示。</p></li><li><p>在模板Excle文件中，在独立的单元格（可以是合并的单元格）中填写完整的引用标签。</p></li><li><p>上述标签中，作业组信息是固定通配符，不需要要修改，活动实例，作业组属性的通配符 只需要按需求替换活动实例名与作业组属性名称即可，在作业/作业项的通配符中namepath为该作业或者作业项 从顶级作业开始的名称全路径，以&quot;.&quot;隔开。</p></li><li><p>配置文档为Excel时，需要完整地定义出Excel模板的首页和后续页。Sheet名如果为“CopyOfSheet2{5}”表示这张Sheet由Sheet2拷贝而来，同时对以作业规范方式引用的标签通配符中所有的{n}替换为{n+5}。如果数据没有填写完的话，平台将自动根据CopyOfSheet2{5}的规则去扩展新的Sheet。</p></li><li><p>签名和图片会替换，但在Web端Excel暂时不能显示，Word可以在V3.8.0及以上版本显示。下载的Excel或Word文件可以正常显示。</p></li><li><p>一个作业（项）可以有多个逻辑，每个逻辑可以有多张逻辑图片，逻辑图片的m为该作业（项）的所有图片的序列。如某个作业项有三个逻辑，每个逻辑有两张图片，那么当m=5（m从0开始计算）时，则显示的为第三个逻辑的第二张图片。</p></li><li><p>一个作业（项）可以有多个文字记录逻辑，m为该作业（项）的所有文字记录逻辑的序列。如某个作业项有五个文字记录逻辑，那么当m=3(m从0开始计算)，则显示为第三个文字记录逻辑。</p></li><li><p>通配符中的没有中括号（中括号表示该参数可有可无）。  </p><ul><li><p>使 在word文档模板中，通配符必须用.e\$结束。</p></li><li><p>在excle中如果没有.e\$,则通配符以当前单元格结尾作为结束，在单元格中如果有多个通配符，除最后一个通配符外的通配符都需要以.e$作为结束标志。</p></li><li><p>在excle中，通配符的值为图片或者签名时，该通配符必须单独占一个单元格且单元格中只能是通配符，不可有其他字符。</p></li></ul></li><li><p>扩展函数中，FuncEx是动态库名称，FuncEx<em>FuncClass为类所在命名空间 </em>类名，GetComment为函数名，在括号中可以添加参数, 参数个数可以为0或者多个，用逗号隔开。</p></li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="word模板中通配符讲解"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#word模板中通配符讲解" title="Direct link to heading">#</a>Word模板中通配符讲解</h2><ul><li><p>作业组属性相关引用标签</p><ul><li>动火申请单位：<code>$im.tg.a.作业点归属单位.value.e$</code></li><li>动火申请人：<code>$im.tg.a.申请人.value.e$</code></li><li>作业证编号：<code>$im.tg.a.作业票号.value.e$</code></li><li>动火作业级别：<code>$im.tg.a.作业等级.value.e$</code></li><li>动火作业级别：<code>$im.tg.a.作业等级.value.e$</code></li><li>动火地点：<code>$im.tg.a.作业详细地点.value.e$</code></li><li>动火方式：<code>$im.tg.a.作业方式.value.e$</code></li><li>动火作业负责人：<code>$im.tg.a.作业负责人.value.e$</code></li><li>动火人：<code>$im.tg.a.作业人员姓名.value.e$</code></li><li>危害识别：<code>$im.tg.a.危害识别.value.e$</code></li><li>监火人：<code>$im.tg.a.运行监护人.value.e$</code></li></ul></li><li><p>作业组相关引用标签</p><ul><li>动火时间：<code>$im.tg.s.planStartTime.e$ 至 $im.tg.s.planEndTime.e$</code></li></ul></li><li><p>作业规范相关引用标签</p><ul><li><p><strong>第一个</strong>作业规范<em>单类气体分析检测</em>下作业项的值及执行时间。</p><ul><li>动火分析时间：<code>$im.ts.i.单类气体分析检测{0}.分析点名称.inputTime.e$</code></li><li>分析点名称：<code>$im.ts.i.单类气体分析检测{0}.分析点名称.value.e$</code></li><li>分析数据：<code>$im.ts.i.单类气体分析检测{0}.气体含量.value.e$</code></li><li>分析人：<code>$im.tg.i.检测人员检测.检测人员签名.value.e$</code></li></ul></li></ul></li><li><p>指定作业或指定作业项相关引用标签</p><ul><li><p>实施安全教育人：<code>$im.tg.i.落实安全措施.安全措施落实人签名.value.e$</code> 【作业<em>落实安全措施</em>下作业项<em>安全措施落实人签名</em>的值】。</p></li><li><p>安全部意见：<code>$im.tg.i.审批签名.审批人签名.value.e$ ,$im.tg.i.审批签名.审批人签名.inputTime.e$</code> 【作业<em>审批签名</em>下作业项<em>审批人签名</em>的值和执行时间】。</p></li></ul></li></ul></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/iDongMobility/imgenius-docs/edit/master/versioned_docs/version-4.0.2/附录/作业树模板配置和使用.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-10-27T09:41:08.000Z" class="docLastUpdatedAt_1sqk">10/27/2020</time></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/附录/大屏配置和使用"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« 大屏配置和使用</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/附录/使用条码标签"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">使用条码标签 »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#使用说明" class="contents__link">使用说明</a></li><li><a href="#eoc报表详情word显示" class="contents__link">EOC报表详情Word显示</a></li><li><a href="#引用标签" class="contents__link">引用标签</a><ul><li><a href="#作业组相关引用标签" class="contents__link">作业组相关引用标签</a></li><li><a href="#流程活动相关引用标签" class="contents__link">流程活动相关引用标签</a></li><li><a href="#作业组属性相关引用标签" class="contents__link">作业组属性相关引用标签</a></li><li><a href="#指定项目相关引用标签" class="contents__link">指定项目相关引用标签</a></li><li><a href="#指定作业或指定作业项相关引用标签" class="contents__link">指定作业或指定作业项相关引用标签</a></li><li><a href="#作业规范相关引用标签" class="contents__link">作业规范相关引用标签</a></li><li><a href="#资产属性相关引用标签" class="contents__link">资产属性相关引用标签</a></li><li><a href="#扩展函数相关引用标签" class="contents__link">扩展函数相关引用标签</a></li><li><a href="#json格式相关引用标签" class="contents__link">JSON格式相关引用标签</a></li><li><a href="#注意" class="contents__link">注意</a></li></ul></li><li><a href="#word模板中通配符讲解" class="contents__link">Word模板中通配符讲解</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">文档</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/安装/系统要求">安装</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/用户使用手册/网页端/登录">用户使用手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统配置手册/授权管理/授权管理">系统配置手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统维护指南/运行监控和维护">系统维护指南</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统扩展指南/主页定制扩展开发">系统扩展指南</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">社区</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://gitter.im/iDongMobility/imgenius-docs">Gitter</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://weibo.com/idongmobility">微博</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://mp.weixin.qq.com/s/eLjZg1xII3Zchg00Z44ZCQ">微信</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/idong-mobility-technologies/">LinkedIn</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">更多</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/clients.html">客户故事</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/about.html">联系我们</a></li></ul></div></div><div class="text--center"><div>Copyright © 2020 上海艾动信息科技有限公司 Built with Docusaurus.</div></div></div></footer>
 </div>
 
-<script src="/styles.62b03a7b.js"></script>
+<script src="/styles.1d898ef2.js"></script>
 
-<script src="/runtime~main.ce592006.js"></script>
+<script src="/runtime~main.10b313b1.js"></script>
 
-<script src="/main.1a29efea.js"></script>
+<script src="/main.f1372f03.js"></script>
 
-<script src="/1.9d06574e.js"></script>
+<script src="/1.1e5ad6df.js"></script>
 
-<script src="/2.76031fbb.js"></script>
+<script src="/2.d851764c.js"></script>
 
-<script src="/3.0bf4cd17.js"></script>
+<script src="/3.4a2777ac.js"></script>
 
-<script src="/1be78505.d8f2e4b5.js"></script>
+<script src="/1be78505.02a74dd6.js"></script>
 
 <script src="/20ac7829.865c86bc.js"></script>
 
-<script src="/17896441.2f9c9176.js"></script>
+<script src="/17896441.24537d4e.js"></script>
 
-<script src="/813977c5.e060f67a.js"></script>
+<script src="/813977c5.b0f7a5fc.js"></script>
 
 
 </body>
