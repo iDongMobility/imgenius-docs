@@ -1,0 +1,33 @@
+// ���ݶ�����ҵ�ʲ������ԡ������ˡ�(�ַ�������)�͵�¼�˲�ͬ���ֹ��ҵ�����أ�����������ҵ��
+var resultName = ScriptEngine.GetResultName();
+
+var tasks = ScriptEngine.Context.GetChildTasks('00000000-0000-0000-0000-000000000000'); //������ҵ
+
+var ap = '';
+var user = GlobalInfo.GetLoginUser();
+if (user) {
+	ap = user.Name;
+}
+
+function Process(_tasks, _callback) {
+	var daAccess = new DAAccess();
+	var db = daAccess.GetDA(SyncEntity.AssetProperty);
+
+	function ProcessOne(_index) {
+		if (_index >= _tasks.length) {
+			_callback(true);
+		} else {
+			db.GetAssetProperty(_tasks[_index].AssetID, '������', function(isOk, property) {
+				var rp = property.CurrentValue;
+				if (rp !== ap) {
+					ScriptEngine.Context.SetTaskAttributeValue(_tasks[_index].ID, 'DefaultTaskStatus', 2);
+					ScriptEngine.Context.SetTaskAttributeValue(_tasks[_index].ID, 'IsHideOnMW', true);
+					var taskItems = GetTasks(_tasks[_index].ID);
+					_.each(taskItems, function(item) {
+						ScriptEngine.Context.SetTaskAttributeValue(item.ID, 'IsHideOnMW', true);
+					});
+				}
+				_index++;
+				ProcessOne(_index);
+			});
+		}
