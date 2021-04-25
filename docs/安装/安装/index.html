@@ -17,15 +17,15 @@
 <link rel="stylesheet" href="/styles.3678f31e.css">
 
 
-<link rel="preload" href="/styles.62b03a7b.js" as="script">
+<link rel="preload" href="/styles.47ee68f5.js" as="script">
 
-<link rel="preload" href="/runtime~main.f6197d23.js" as="script">
+<link rel="preload" href="/runtime~main.cc0ff17e.js" as="script">
 
-<link rel="preload" href="/main.03e8f80f.js" as="script">
+<link rel="preload" href="/main.b4bbfa33.js" as="script">
 
 <link rel="preload" href="/1.9d06574e.js" as="script">
 
-<link rel="preload" href="/2.76031fbb.js" as="script">
+<link rel="preload" href="/2.719ea3b7.js" as="script">
 
 <link rel="preload" href="/3.0bf4cd17.js" as="script">
 
@@ -35,7 +35,7 @@
 
 <link rel="preload" href="/17896441.2f9c9176.js" as="script">
 
-<link rel="preload" href="/653ea051.908309ce.js" as="script">
+<link rel="preload" href="/653ea051.5a42ea84.js" as="script">
 
 </head>
 <body>
@@ -49,15 +49,15 @@
 点击是，部署工具将启动 ASP.Net MVC安装包。</p></li><li><p>点击Next，将进行安装。</p></li><li><p>点击确定，回到部署工具窗口，点击关闭，退出应用。</p></li><li><p>点击Finish，MVC安装完成。部署工具将按照设置进行相关文件的复制和参数设置，直到部署完成，会弹出确认对话框。</p></li></ul></li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="部署消息系统"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#部署消息系统" title="Direct link to heading">#</a>部署消息系统</h2><ul><li><p><strong>使用消息系统前必须先进行消息系统部署</strong>，运行“im部署工具”，如下图：</p><img alt=" " src="/docimg/imgenius6.png"></li><li><p><strong>打开SMC（im系统管理中心）</strong>，把访问RabbitMQ的信息写入到“系统设置”→“服务”→“内部消息”，勾选上“启用”，在“RabbitMQ服务器内网IP”中填写RabbitMQServer所在机器的IP地址；在“RbbitMQ用户名”和“RabbitMQ密码”中填写创建的用户和密码；在“WebSocket服务器外网IP”中填写同步服务器所在机器的外网IP地址，“WebSocket服务器外网端口”填写‘6018’，“WebSocket服务器外网端口（SSL）”填写‘9090’。</p><img alt=" " src="/docimg/imgenius7.png"></li></ul><p><strong>消息系统部署目的</strong>：</p><ul><li><p>Web端，移动终端，短信，邮件有一个消息提醒的作用。</p></li><li><p>同时，在SMC系统配置中，要填好对应的项。</p><img alt=" " src="/docimg/imgenius8.png"></li><li><p>启用： 只有启用了消息系统才会工作。</p></li><li><p>端口号：8010可以更改。</p></li><li><p>企业运营中心外部访问网址：按照服务器地址做配置。</p></li><li><p>消息系统外部访问地址：按照服务器地址做配置。</p></li><li><p><strong>能正常访问消息系统外部访问地址</strong>，如下图，说明按照正常。</p><img alt=" " src="/docimg/imgenius0.png"></li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="卸载或修改"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#卸载或修改" title="Direct link to heading">#</a>卸载或修改</h2><ul><li><p>在已经下载的imgenius 安装盘中点击运行Setup.exe，可以对已有安装组件进行修复和删除。</p></li><li><p>选择修复或删除，点击完成。</p></li><li><p>imgenius软件安装指南将根据选择进行修复或者删除。</p></li><li><p>可以点击取消，实现操作回滚。删除完成后，点击关闭，退出安装向导。</p></li></ul><h2><a aria-hidden="true" tabindex="-1" class="anchor enhancedAnchor_ZqCz" id="安装im移动工作站"></a><a aria-hidden="true" tabindex="-1" class="hash-link" href="#安装im移动工作站" title="Direct link to heading">#</a>安装im移动工作站</h2><ul><li><p>im移动工作站是imgenius企业移动现场作业管理系统应用在手持终端设备供用户进行作业活动的软件。</p></li><li><p>安装包中有四个apk文件，分别为通用版，眼镜远程指导版，钛准定位版，AIC8600独立版，根据需要拷贝到安卓手机上安装，直接点击下一步允许安装即可。如图：</p><img alt=" " src="/docimg/imgenius9.png"></li><li><p>当手机网络处于和服务器相同的内部网络时，可扫描网站-系统移动终端上的二维码下载。</p><img alt=" " src="/docimg/eoczhongduan.png"></li></ul></div></article><div class="margin-vert--xl"><div class="row"><div class="col"><a href="https://github.com/iDongMobility/imgenius-docs/edit/master/versioned_docs/version-4.0.2/安装/安装.md" target="_blank" rel="noreferrer noopener"><svg fill="currentColor" height="1.2em" width="1.2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 40 40" style="margin-right:0.3em;vertical-align:sub"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col text--right"><em><small>Last updated on <time datetime="2020-10-27T09:41:08.000Z" class="docLastUpdatedAt_1sqk">10/27/2020</time></small></em></div></div></div><div class="margin-vert--lg"><nav class="pagination-nav"><div class="pagination-nav__item"><a class="pagination-nav__link" href="/docs/安装/系统要求"><div class="pagination-nav__link--sublabel">Previous</div><div class="pagination-nav__link--label">« 系统要求</div></a></div><div class="pagination-nav__item pagination-nav__item--next"><a class="pagination-nav__link" href="/docs/安装/安装SQLServer"><div class="pagination-nav__link--sublabel">Next</div><div class="pagination-nav__link--label">安装SQLServer »</div></a></div></nav></div></div></div><div class="col col--3"><div class="tableOfContents_TbNY"><ul class="contents contents__left-border"><li><a href="#安装前准备" class="contents__link">安装前准备</a></li><li><a href="#安装数据库" class="contents__link">安装数据库</a><ul><li><a href="#sql-server的安装" class="contents__link">SQL Server的安装</a></li><li><a href="#postgressql的安装" class="contents__link">PostgresSQL的安装</a></li></ul></li><li><a href="#安装-net-framework" class="contents__link">安装. Net Framework</a></li><li><a href="#安装和配置interner信息服务（iis）" class="contents__link">安装和配置Interner信息服务（IIS）</a></li><li><a href="#安装mongodb" class="contents__link">安装MongoDB</a></li><li><a href="#安装rabbitmq" class="contents__link">安装RabbitMQ</a></li><li><a href="#安装imgenius" class="contents__link">安装imgenius</a></li><li><a href="#部署im企业运营中心" class="contents__link">部署im企业运营中心</a></li><li><a href="#部署消息系统" class="contents__link">部署消息系统</a></li><li><a href="#卸载或修改" class="contents__link">卸载或修改</a></li><li><a href="#安装im移动工作站" class="contents__link">安装im移动工作站</a></li></ul></div></div></div></div></main></div></div><footer class="footer footer--dark"><div class="container"><div class="row footer__links"><div class="col footer__col"><h4 class="footer__title">文档</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" href="/docs/安装/系统要求">安装</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/用户使用手册/网页端/登录">用户使用手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统配置手册/授权管理/授权管理">系统配置手册</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统维护指南/运行监控和维护">系统维护指南</a></li><li class="footer__item"><a class="footer__link-item" href="/docs/系统扩展指南/主页定制扩展开发">系统扩展指南</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">社区</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://gitter.im/iDongMobility/imgenius-docs">Gitter</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://weibo.com/idongmobility">微博</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://mp.weixin.qq.com/s/eLjZg1xII3Zchg00Z44ZCQ">微信</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/company/idong-mobility-technologies/">LinkedIn</a></li></ul></div><div class="col footer__col"><h4 class="footer__title">更多</h4><ul class="footer__items"><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/clients.html">客户故事</a></li><li class="footer__item"><a class="footer__link-item" target="_blank" rel="noopener noreferrer" href="http://www.idongmobility.com/index.php/zh/about.html">联系我们</a></li></ul></div></div><div class="text--center"><div>Copyright © 2021 上海艾动信息科技有限公司 Built with Docusaurus.</div></div></div></footer>
 </div>
 
-<script src="/styles.62b03a7b.js"></script>
+<script src="/styles.47ee68f5.js"></script>
 
-<script src="/runtime~main.f6197d23.js"></script>
+<script src="/runtime~main.cc0ff17e.js"></script>
 
-<script src="/main.03e8f80f.js"></script>
+<script src="/main.b4bbfa33.js"></script>
 
 <script src="/1.9d06574e.js"></script>
 
-<script src="/2.76031fbb.js"></script>
+<script src="/2.719ea3b7.js"></script>
 
 <script src="/3.0bf4cd17.js"></script>
 
@@ -67,7 +67,7 @@
 
 <script src="/17896441.2f9c9176.js"></script>
 
-<script src="/653ea051.908309ce.js"></script>
+<script src="/653ea051.5a42ea84.js"></script>
 
 
 </body>
