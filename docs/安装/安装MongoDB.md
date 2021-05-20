@@ -75,6 +75,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
   <img alt=" " src={useBaseUrl('docimg/mongodb5.png')} />
 
+### 远程连接MongoDB配置
+
+* 想要在某台机器上连接到服务器的MongoDB，首先需要打开服务器的27017端口，在防火墙高级设置中新建入站规则，规则类型选择端口，特定本地端口中填写27017即可。
+
+* 之后打开MongoDB安装目录的bin文件夹，如“C:\Program Files\MongoDB\Server\4.0\bin”，使用文档编辑程序修改其中的mongod.cfg文件，将服务器ip添加进去，如图：
+
+  <img alt=" " src={useBaseUrl('docimg/mongodblianjie.png')} />
+
+* 之后重启MongoDB服务即可。
+
 
 **附：**
 
