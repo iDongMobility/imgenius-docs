@@ -27,9 +27,7 @@ module.exports = {
     algolia: {
       apiKey: 'aff3850791f74b7f4fd85e758696b6c7',
       indexName: 'idongmobility_userguide',
-      algoliaOptions: {
-        facetFilters: [`version:${versions[0]}`],
-      },
+      contextualSearch: true,
     },
     navbar: {
       title: 'imgenius',
