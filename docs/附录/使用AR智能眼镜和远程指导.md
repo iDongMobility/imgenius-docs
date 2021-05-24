@@ -2,21 +2,26 @@
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## 硬件要求
+
 PDA需要支持OTG功能，部分机型需要手动开启，并且超过一定时间不使用将自动关闭
+
 ## 启用功能
+
 * SDC设置中`启用远程指导`功能
 
    <img alt=" " src={useBaseUrl('docimg/远程指导1.png')} />
 * 申请`后台专家`授权，可在SMC中查看已安装授权
 
-    <img alt=" " src={useBaseUrl('docimg/远程指导2.png')} />
+    <img alt=" " src={useBaseUrl('docimg/远程指导4031.png')} />
 * SDC中给指定用户勾上`后台专家`权限
 
     <img alt=" " src={useBaseUrl('docimg/远程指导3.png')} />
 * PDA安装亮亮插件版移动工作站`imMW_LLPlugin.apk`
 
 ## 使用步骤
+
 ### PDA端
+
 * 启用OTG功能
 * 连接AR智能眼镜
 
@@ -40,6 +45,7 @@ PDA需要支持OTG功能，部分机型需要手动开启，并且超过一定�
     <img alt=" " src={useBaseUrl('docimg/远程指导8.jpg')} />
 
 ### EOC端
+
 * `后台专家`登录EOC后点击图示按钮进入`远程指导`页面
 
     <img alt=" " src={useBaseUrl('docimg/远程指导9.png')} />
@@ -54,6 +60,7 @@ PDA需要支持OTG功能，部分机型需要手动开启，并且超过一定�
     <img alt=" " src={useBaseUrl('docimg/远程指导12.png')} />
 
 ### 远程指导历史查看
+
 * 点击选项卡`远程指导列表`
 
     <img alt=" " src={useBaseUrl('docimg/远程指导13.png')} />
