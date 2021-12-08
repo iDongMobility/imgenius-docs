@@ -50,6 +50,6 @@ html[data-theme='dark'] .header-github-link:before {
     no-repeat;
 }
 
-img {
+.markdown img {
   max-width: 70%;
 }
