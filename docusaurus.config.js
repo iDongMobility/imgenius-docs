@@ -1,4 +1,5 @@
 const versions = require('./versions.json');
+const path = require('path');
 
 module.exports = {
   title: 'imgenius',
@@ -8,22 +9,24 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'iDongMobility', // Usually your GitHub org/user name.
   projectName: 'imgenius-docs', // Usually your repo name.  
-  scripts: [
-    'https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js',
-    '/js/index.js',
-  ],  
-  plugins: [
-    [
-      '@docusaurus/plugin-ideal-image',
-      {
-        quality: 70,
-        max: 1030, // max resized image's size.
-        min: 640, // min resized image's size. if original is lower, use that size.
-        steps: 2, // the max number of images generated between min and max (inclusive)
-      },
-    ],
+  scripts: [    
+    '/js/index.js'
   ],
-  themeConfig: {    
+  plugins: [
+    path.resolve(__dirname, 'plugins', 'imagezoom')
+  ],
+  themeConfig: {
+    hideableSidebar: true,
+    zoom: {
+      selector: '.markdown img',
+      config: {
+        // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+        background: {
+          light: 'rgb(255, 255, 255)',
+          dark: 'rgb(50, 50, 50)'
+        }
+      }
+    },
     algolia: {
       apiKey: 'aff3850791f74b7f4fd85e758696b6c7',
       indexName: 'idongmobility_userguide',
@@ -35,7 +38,7 @@ module.exports = {
         alt: 'imgenius Logo',
         src: 'img/logo.png',
       },
-      links: [
+      items: [
         {
           to: 'docs/简介/概述',
           activeBasePath: 'docs',
@@ -53,12 +56,12 @@ module.exports = {
             ...versions.slice(1).map((version) => ({
               label: version,
               to: `docs/${version}/简介/概述`,
-            })),            
+            })),
           ],
         },
         {
-          to: 'blog', 
-          label: '博客', 
+          to: 'blog',
+          label: '博客',
           position: 'left'
         },
         {
@@ -155,7 +158,7 @@ module.exports = {
           editUrl:
             'https://github.com/iDongMobility/imgenius-docs/edit/master/',
           showLastUpdateAuthor: false,
-          showLastUpdateTime: true,          
+          showLastUpdateTime: true,
         },
         blog: {
           showReadingTime: true,
