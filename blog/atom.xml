@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://idongmobility.github.io/blog</id>
+    <title>imgenius Blog</title>
+    <updated>2020-05-14T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://idongmobility.github.io/blog"/>
+    <subtitle>imgenius Blog</subtitle>
+    <icon>https://idongmobility.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[文档编写和管理的新套路]]></title>
+        <id>文档编写和管理的新套路</id>
+        <link href="https://idongmobility.github.io/blog/2020/05/14/thinking-docs-opensource"/>
+        <updated>2020-05-14T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[使用开源协作模式来完成文档编写和管理的思考。]]></summary>
+        <author>
+            <name>洪志兵</name>
+            <uri>https://github.com/lkhzb</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[使用新的文档框架]]></title>
+        <id>使用新的文档框架</id>
+        <link href="https://idongmobility.github.io/blog/2020/05/06/use-new-doc-framework"/>
+        <updated>2020-05-06T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[为了提高浏览imgenius文档体验，从今天开始我们改成使用Docusaurus 2 alpha来构建文档。]]></summary>
+        <content type="html"><![CDATA[<p>为了提高浏览imgenius文档体验，从今天开始我们改成使用<a href="https://v2.docusaurus.io/"><strong>Docusaurus 2 alpha</strong></a>来构建文档。</p><p>主要增强以下功能：</p><ul><li>多版本支持。</li><li>导航自由展开和折叠。</li><li>使用<a href="https://www.algolia.com/"><strong>algolia</strong></a>提高搜索体验。</li><li>静态编译，提高打开速度。</li><li>增加工程师博客。</li></ul>]]></content>
+        <author>
+            <name>洪志兵</name>
+            <uri>https://github.com/lkhzb</uri>
+        </author>
+    </entry>
+</feed>

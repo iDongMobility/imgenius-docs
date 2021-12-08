@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkuserguide=self.webpackChunkuserguide||[]).push([[34497],{23201:function(e){e.exports=JSON.parse('{"allTagsPath":"/blog/tags","slug":"/blog/tags/inner-source","name":"InnerSource","count":1,"permalink":"/blog/tags/inner-source"}')}}]);

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>imgenius Blog</title>
+        <link>https://idongmobility.github.io/blog</link>
+        <description>imgenius Blog</description>
+        <lastBuildDate>Thu, 14 May 2020 00:00:00 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <item>
+            <title><![CDATA[文档编写和管理的新套路]]></title>
+            <link>https://idongmobility.github.io/blog/2020/05/14/thinking-docs-opensource</link>
+            <guid>文档编写和管理的新套路</guid>
+            <pubDate>Thu, 14 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[使用开源协作模式来完成文档编写和管理的思考。]]></description>
+        </item>
+        <item>
+            <title><![CDATA[使用新的文档框架]]></title>
+            <link>https://idongmobility.github.io/blog/2020/05/06/use-new-doc-framework</link>
+            <guid>使用新的文档框架</guid>
+            <pubDate>Wed, 06 May 2020 00:00:00 GMT</pubDate>
+            <description><![CDATA[为了提高浏览imgenius文档体验，从今天开始我们改成使用Docusaurus 2 alpha来构建文档。]]></description>
+            <content:encoded><![CDATA[<p>为了提高浏览imgenius文档体验，从今天开始我们改成使用<a href="https://v2.docusaurus.io/"><strong>Docusaurus 2 alpha</strong></a>来构建文档。</p><p>主要增强以下功能：</p><ul><li>多版本支持。</li><li>导航自由展开和折叠。</li><li>使用<a href="https://www.algolia.com/"><strong>algolia</strong></a>提高搜索体验。</li><li>静态编译，提高打开速度。</li><li>增加工程师博客。</li></ul>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

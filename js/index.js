@@ -1,15 +1,15 @@
-var timer = setInterval(() => {
-    if (/comp|inter|loaded/.test(document.readyState)) {
-        clearInterval(timer);            
-        if (typeof addBackToTop !== 'undefined') {
-          addBackToTop({
-            diameter: 56,
-            backgroundColor: '#ffa900',
-            textColor: '#fff'
-          });
-        }
-      }    
-}, 100);
+// var timer = setInterval(() => {
+//     if (/comp|inter|loaded/.test(document.readyState)) {
+//         clearInterval(timer);            
+//         if (typeof addBackToTop !== 'undefined') {
+//           addBackToTop({
+//             diameter: 56,
+//             backgroundColor: '#ffa900',
+//             textColor: '#fff'
+//           });
+//         }
+//       }    
+// }, 100);
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
