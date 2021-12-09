@@ -33,6 +33,7 @@ module.exports = {
       contextualSearch: true,
     },
     navbar: {
+      hideOnScroll: true,
       title: 'imgenius',
       logo: {
         alt: 'imgenius Logo',
