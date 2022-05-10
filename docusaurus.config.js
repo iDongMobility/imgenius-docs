@@ -6,6 +6,8 @@ module.exports = {
   tagline: '让每一个服务/运维商，都成为智慧的团队',
   url: 'https://idongmobility.github.io/',
   baseUrl: '/',
+  onBrokenLinks: 'warn',
+  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'iDongMobility', // Usually your GitHub org/user name.
   projectName: 'imgenius-docs', // Usually your repo name.  
@@ -25,7 +27,7 @@ module.exports = {
         hashed: true,
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
-        language: ["en", "zh"],
+        language: ["zh"],
         // ```
       },
     ],
