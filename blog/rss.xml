@@ -7,20 +7,27 @@
         <lastBuildDate>Thu, 14 May 2020 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
         <item>
             <title><![CDATA[文档编写和管理的新套路]]></title>
-            <link>https://idongmobility.github.io/blog/2020/05/14/thinking-docs-opensource</link>
-            <guid>文档编写和管理的新套路</guid>
+            <link>https://idongmobility.github.io/blog/thinking-docs-opensource</link>
+            <guid>thinking-docs-opensource</guid>
             <pubDate>Thu, 14 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[使用开源协作模式来完成文档编写和管理的思考。]]></description>
+            <content:encoded><![CDATA[<p>使用开源协作模式来完成文档编写和管理的思考。</p><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="问题由来">问题由来<a class="hash-link" href="#问题由来" title="Direct link to heading">​</a></h2><p>去年，随着更多伙伴的加入，大家对我们的产品文档提出一些意见：</p><ol><li>更新不及时</li><li>新功能不能快速传递</li><li>发现文档错误，没有地方反馈和更新</li><li>...</li></ol><p>以前，我们的文档基本都是在Word中编写，再通过PDF或chm跟随安装盘一起分发，这种模式弊端显而易见：</p><ol><li>多人协作不方便</li><li>更改很难及时</li></ol><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="现在方案">现在方案<a class="hash-link" href="#现在方案" title="Direct link to heading">​</a></h2><p>现在很多公司的文档都是基于 <strong>Markdown</strong> + <strong>GitHub</strong> + <strong>文档框架</strong>（如：<strong>Docusaurus</strong>、<strong>Docsify</strong>等或自研）编写和管理，通过CICD自动部署到自家服务或第三方服务（如<strong>GitHub Pages</strong>，<strong>Netlify</strong>等）。</p><p>文档向所有人开放，任何人都可以贡献，当然，目前主要贡献还是自家员工，整个过程专注、开放、透明、快速和及时。</p><p><strong>imgenius</strong>新文档就是采用这种模式，从今年1月到5月（实际是从春节后正式开始），8位contributors利用工作空闲时间，534次commits就完成所有文档的编写和部署，整个过程非常快速。且搭建好这个框架后，以后的协作和更新将会更加及时。</p><ul><li><p>imgenius文档主页</p><img loading="lazy" alt=" " src="/blogimg/dochome.png" class="img_E7b_"></li><li><p>imgenius文档内容主页</p><img loading="lazy" alt=" " src="/blogimg/doccontent.png" class="img_E7b_"></li><li><p>GitHub Contributors</p><img loading="lazy" alt=" " src="/blogimg/gitcommit.png" class="img_E7b_"></li><li><p><a href="https://github.com/iDongMobility/imgenius-docs" target="_blank" rel="noopener noreferrer">imgenius文档源码</a></p></li><li><p><a href="https://userguide.idongmobility.cn/" target="_blank" rel="noopener noreferrer">imgenius在线文档</a></p></li></ul><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="有待改进">有待改进<a class="hash-link" href="#有待改进" title="Direct link to heading">​</a></h2><p>整个过程下来，还有很多需要改进，如：主动贡献、文档质量等。</p><ul><li>提供完善的贡献指导文档，让贡献者更快找到方向。</li><li>文档内容自动检测和测试，保证文档质量。</li><li>不直接提交到master分支，通过pull request，有人负责审核。</li></ul><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="opensource--innersource--">OpenSource &amp; InnerSource &amp; ?<a class="hash-link" href="#opensource--innersource--" title="Direct link to heading">​</a></h2><blockquote><ul><li>开源是如此的成功，以至于现在用一句时髦的话来形容：“开源软件正在吞噬世界”，一点都不为过。这从侧面反映出，开源的开发方法是有效的，而且可以开发出Linux内核这种既能在超级计算中应用也可以在智能手机上运行的卓越项目。</li><li>开源项目的工作流程解释了为何来自世界各地的志愿者们可以如此高效的完成如此巨大的项目。这样就给那些大型的跨国公司带来许多的灵感，和成功的开源项目的社区一样，大型公司的软件工程师们亦是分布在全球各地，而且不在同一个部门，他们并不能够频繁的见面，报告的老板也不一样。为了在企业内部能够增强合作，一些公司开始尝试采用开源项目的工作流程。</li><li>Tim O’Reilly 首次使用了术语“InnerSource”这个词汇，我们翻译它为”内部开源”。</li></ul></blockquote><p>注：以上内容来自于<a href="https://www.sohu.com/a/143331227_753085" target="_blank" rel="noopener noreferrer">创造“生命”之术--InnerSource介绍</a></p><p><strong>开源</strong>和<strong>内部开源</strong>已经被证实是一套可行的方案，在2c和2b企业都有采用，我们也希望采用内部开源的方式，快速和高效地为用户提供高质量、创新型应用。</p><p>注：我们所说的内部，不仅仅是我们公司，还包括合作伙伴、最终用户等，欢迎更多伙伴加入我们。</p><h2 class="anchor anchorWithHideOnScrollNavbar_R0VQ" id="延伸阅读">延伸阅读<a class="hash-link" href="#延伸阅读" title="Direct link to heading">​</a></h2><ul><li><a href="https://cloud.tencent.com/developer/article/1556709" target="_blank" rel="noopener noreferrer">超两万技术人员如何减少重复造轮子？腾讯推进内部开源协同</a></li><li><a href="https://gitee.com/InnerSource/future" target="_blank" rel="noopener noreferrer">内部开源的未来</a></li><li><a href="https://gitee.com/InnerSource/leverage" target="_blank" rel="noopener noreferrer">内部开源：如何在企业内部发挥开源的魔力</a></li><li><a href="https://gitee.com/InnerSource" target="_blank" rel="noopener noreferrer">gitee企业内源治理</a></li></ul>]]></content:encoded>
+            <category>文档</category>
+            <category>OpenSource</category>
+            <category>InnerSource</category>
         </item>
         <item>
             <title><![CDATA[使用新的文档框架]]></title>
-            <link>https://idongmobility.github.io/blog/2020/05/06/use-new-doc-framework</link>
-            <guid>使用新的文档框架</guid>
+            <link>https://idongmobility.github.io/blog/use-new-doc-framework</link>
+            <guid>use-new-doc-framework</guid>
             <pubDate>Wed, 06 May 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[为了提高浏览imgenius文档体验，从今天开始我们改成使用Docusaurus 2 alpha来构建文档。]]></description>
-            <content:encoded><![CDATA[<p>为了提高浏览imgenius文档体验，从今天开始我们改成使用<a href="https://v2.docusaurus.io/"><strong>Docusaurus 2 alpha</strong></a>来构建文档。</p><p>主要增强以下功能：</p><ul><li>多版本支持。</li><li>导航自由展开和折叠。</li><li>使用<a href="https://www.algolia.com/"><strong>algolia</strong></a>提高搜索体验。</li><li>静态编译，提高打开速度。</li><li>增加工程师博客。</li></ul>]]></content:encoded>
+            <content:encoded><![CDATA[<p>为了提高浏览imgenius文档体验，从今天开始我们改成使用<a href="https://v2.docusaurus.io/" target="_blank" rel="noopener noreferrer"><strong>Docusaurus 2 alpha</strong></a>来构建文档。</p><p>主要增强以下功能：</p><ul><li>多版本支持。</li><li>导航自由展开和折叠。</li><li>使用<a href="https://www.algolia.com/" target="_blank" rel="noopener noreferrer"><strong>algolia</strong></a>提高搜索体验。</li><li>静态编译，提高打开速度。</li><li>增加工程师博客。</li></ul>]]></content:encoded>
+            <category>文档框架</category>
+            <category>docusaurus</category>
         </item>
     </channel>
 </rss>
