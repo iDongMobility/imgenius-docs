@@ -27,7 +27,7 @@ module.exports = {
         hashed: true,
         // For Docs using Chinese, The `language` is recommended to set to:
         // ```
-        language: ["zh"],
+        language: ["en", "zh"],
         // ```
       },
     ],
