@@ -15,8 +15,22 @@ module.exports = {
   plugins: [
     path.resolve(__dirname, 'plugins', 'imagezoom')
   ],
-  themeConfig: {
-    hideableSidebar: true,
+  themes: [
+    // ... Your other themes.
+    [
+      require.resolve("@easyops-cn/docusaurus-search-local"),
+      {
+        // ... Your options.
+        // `hashed` is recommended as long-term-cache of index file is possible.
+        hashed: true,
+        // For Docs using Chinese, The `language` is recommended to set to:
+        // ```
+        language: ["en", "zh"],
+        // ```
+      },
+    ],
+  ],
+  themeConfig: {    
     zoom: {
       selector: '.markdown img',
       config: {
@@ -26,12 +40,7 @@ module.exports = {
           dark: 'rgb(50, 50, 50)'
         }
       }
-    },
-    algolia: {
-      apiKey: 'aff3850791f74b7f4fd85e758696b6c7',
-      indexName: 'idongmobility_userguide',
-      contextualSearch: true,
-    },
+    },    
     navbar: {
       hideOnScroll: true,
       title: 'imgenius',
@@ -147,6 +156,11 @@ module.exports = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} 上海艾动信息科技有限公司 Built with Docusaurus.`,
+    },
+    docs:{
+      sidebar:{
+        hideable:true,
+      },
     },
   },
   presets: [

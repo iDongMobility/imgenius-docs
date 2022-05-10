@@ -9,9 +9,10 @@
     "deploy": "docusaurus deploy"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-beta.9",
-    "@docusaurus/plugin-ideal-image": "^2.0.0-beta.9",
-    "@docusaurus/preset-classic": "^2.0.0-beta.9",
+    "@docusaurus/core": "^2.0.0-beta.20",
+    "@docusaurus/plugin-ideal-image": "^2.0.0-beta.20",
+    "@docusaurus/preset-classic": "^2.0.0-beta.20",
+    "@easyops-cn/docusaurus-search-local": "^0.23.2",
     "classnames": "^2.3.1",
     "docusaurus-plugin-image-zoom": "^0.0.2",
     "react": "^17.0.2",

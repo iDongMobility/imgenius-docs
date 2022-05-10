@@ -1,9 +1,10 @@
 ---
-id: use-new-doc-framework
+slug: use-new-doc-framework
 title: 使用新的文档框架
-author: 洪志兵
-author_url: https://github.com/lkhzb
-author_image_url: https://avatars1.githubusercontent.com/u/734713?s=460&u=80659284cca37decf26e20589dd1eb39536719f2&v=4
+authors:
+  - name: 洪志兵    
+    url: https://github.com/lkhzb
+    image_url: https://avatars1.githubusercontent.com/u/734713?s=460&u=80659284cca37decf26e20589dd1eb39536719f2&v=4
 tags: [文档框架, docusaurus]
 ---
 
