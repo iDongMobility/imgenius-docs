@@ -28,7 +28,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 7. 运行“mongo.exe --port 27017 -u "userAdmin" -p "请自行设置" --authenticationDatabase "admin"（注：端口与bin文件夹下mongod.cfg内容一致、用户名和密码与自行修改保存一致
 
-8. 运行“use admin”。	
+8. 运行“use admin”。
 
 9. 运行
 “db.createUser({user:"admin",pwd:"请自行设置",roles:[{role:"dbAdminAnyDatabase",db:"admin"},{role:"readWriteAnyDatabase",db:"admin"}]})”创建系统管理员（注：请自行设置user和pwd，并记住；用户名和密码不要含有“@”符号）
@@ -38,12 +38,12 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ### 启用权限认证
 
-1.  Mongo安装完成后，是默认未开启权限认证的，所以我们不创建用户，也可以登录和使用，在robomongo中测试时，“Database”，“UserName”和“Password”为空时，点击“Test”测试也会链接成功。在生产环境中，mongodb未开启权限认证会导致数据被窃取。和其它数据库一样，权限的管理都差不多一样。
+1. Mongo安装完成后，是默认未开启权限认证的，所以我们不创建用户，也可以登录和使用，在robomongo中测试时，“Database”，“UserName”和“Password”为空时，点击“Test”测试也会链接成功。在生产环境中，mongodb未开启权限认证会导致数据被窃取。和其它数据库一样，权限的管理都差不多一样。
 
 2. 但不同的是mongodb的用户是跟数据库相关联的，具体的数据库，还是需要有对应的用户，也就是说哪怕是超级管理员也不能操作其他数据库的。
 
 3. mongodb存储所有的用户信息在admin 数据库的集合system.users中，保存用户名、密码和数据库信息。
-    
+
 4. 由于mongodb默认不启用授权认证，只要能连接到该服务器，就可连接到mongod。若要启用安全认证，需要更改配置文件参数--auth。
 
 **设置权限的步骤如下：**
@@ -70,7 +70,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ### 测试连接和查看是否安装成功
 
-
 * 查看服务是否启动，如图即安装成功：
 
   <img alt=" " src={useBaseUrl('docimg/mongodb5.png')} />
@@ -84,7 +83,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   <img alt=" " src={useBaseUrl('docimg/mongodblianjie.png')} />
 
 * 之后重启MongoDB服务即可。
-
 
 **附：**
 
