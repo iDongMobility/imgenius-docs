@@ -5,7 +5,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 * 运行“mongodb-win32-x86_64-2008plus-ssl-4.0.8-signed.msi”安装MongoDB。（注：如果自行选择了安装路径，请确保安装路径无中文字符）
 
-* Data（数据存盘路径）文件夹和log（日志存盘路径）文件夹会在安装时按照自己配置自动创建。
+* Data（数据存盘路径）文件夹和log（日志存盘路径）文件夹会在安装时按照自己配置自动创建，路径可以修改。
 
    <img alt=" " src={useBaseUrl('docimg/mongodb.png')} />
 
@@ -22,16 +22,16 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 4. 运行“use admin”到admin数据库下。
 
 5. 运行
-“db.createUser({user:"userAdmin",pwd:"请自行设置",roles:[{role:"userAdminAnyDatabase",db:"admin"}]})”创建用户管理员（注：请自行设置user和pwd，并记住；用户名和密码不要含有“@”符号）
+“db.createUser({user:"userAdmin",pwd:"密码",roles:[{role:"userAdminAnyDatabase",db:"admin"}]})”创建用户管理员（注：请自行设置user和pwd，并记住；用户名和密码不要含有“@”符号）
 
 6. 按“Ctrl + C”退出。
 
-7. 运行“mongo.exe --port 27017 -u "userAdmin" -p "请自行设置" --authenticationDatabase "admin"（注：端口与bin文件夹下mongod.cfg内容一致、用户名和密码与自行修改保存一致
+7. 运行“mongo.exe --port 27017 -u "userAdmin" -p "密码" --authenticationDatabase "admin"（注：端口与bin文件夹下mongod.cfg内容一致、用户名和密码与自行修改保存一致
 
 8. 运行“use admin”。
 
 9. 运行
-“db.createUser({user:"admin",pwd:"请自行设置",roles:[{role:"dbAdminAnyDatabase",db:"admin"},{role:"readWriteAnyDatabase",db:"admin"}]})”创建系统管理员（注：请自行设置user和pwd，并记住；用户名和密码不要含有“@”符号）
+“db.createUser({user:"admin",pwd:"密码",roles:[{role:"dbAdminAnyDatabase",db:"admin"},{role:"readWriteAnyDatabase",db:"admin"}]})”创建系统管理员（注：请自行设置user和pwd，并记住；用户名和密码不要含有“@”符号）
 
 10. 查看用户
 使用db.system.users.find()命令就可以查看我们刚刚创建的用户了。
@@ -52,7 +52,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
    <img alt=" " src={useBaseUrl('docimg/mongodb1.png')} />
 
-2. 打开安装路径bin目录下的“mongod.cfg”文件，将#security:的注释去掉，然后添加authorization: enabled #注意authorization前面要有两个空格，如图：
+2. 打开安装路径bin目录下的“mongod.cfg”文件，将#security:的注释去掉，然后添加authorization: enabled #注意authorization前面要有两个空格，冒号后enabled前要加一个空格，如图：
 
    <img alt=" " src={useBaseUrl('docimg/mongodb2.png')} />
 
@@ -67,6 +67,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
    会看到返回的值为1，这就表示启动成功了。
 
 5. 按“Ctrl + C”退出。
+
+* 如果开启权限认证后，配置文件确认正确配置没有问题了，但是mongodb无法启动，有可能是没有使用配置文件安装服务。可尝试先打开CMD使用命令```mongod --remove或sc delete MongoDB```,先清除之前的服务。再使用命令```mongod --install -f "C:\Program Files\MongoDB\Server\4.0\bin\mongod.cfg" ```安装服务，最后再启动服务。
 
 ### 测试连接和查看是否安装成功
 
