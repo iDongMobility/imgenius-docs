@@ -68,7 +68,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 5. 按“Ctrl + C”退出。
 
-* 如果开启权限认证后，配置文件确认正确配置没有问题了，但是mongodb无法启动，有可能是没有使用配置文件安装服务。可尝试先打开CMD使用命令```mongod --remove或sc delete MongoDB```,先清除之前的服务。再使用命令```mongod --install -f "C:\Program Files\MongoDB\Server\4.0\bin\mongod.cfg" ```安装服务，最后再启动服务。
+:::tip 注意
+如果开启权限认证后，配置文件确认正确配置没有问题了，但是mongodb无法启动，有可能是没有使用配置文件安装服务。可尝试先打开CMD使用命令```mongod --remove或sc delete MongoDB```,先清除之前的服务。再使用命令```mongod --install -f "C:\Program Files\MongoDB\Server\4.0\bin\mongod.cfg" ```安装服务，最后再启动服务。
+:::tip 注意
 
 ### 测试连接和查看是否安装成功
 
