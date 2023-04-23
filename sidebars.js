@@ -233,6 +233,9 @@ module.exports = {
     ],
     '信创专题': [
       '信创专题/OS的安装',
+      '信创专题/安装PostgresSQL',
+      '信创专题/安装MongoDB',
+      '信创专题/安装RabbitMQ',
     ],
   },
 };
