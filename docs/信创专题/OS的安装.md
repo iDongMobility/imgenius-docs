@@ -3,7 +3,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 ## 深度操作系统（Deepin）社区版
 
-* 深度操作系统是基于Linux内核，以桌面应用为主的开源GNU/Linux操作系统。这里主要说明一下如何在虚拟机中安装Deepin系统。
+* 深度操作系统是基于Linux内核，以桌面应用为主的开源GNU/Linux操作系统。这里主要说明一下如何在虚拟机中安装Deepin系统社区版。
 
 ### 下载Deepin系统
 
@@ -65,6 +65,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
   <img alt=" " src={useBaseUrl('docimg/deepin14.png')} />
 
+### 安装
+
 * 点击开启虚拟机
 
   <img alt=" " src={useBaseUrl('docimg/deepin15.png')} />
@@ -107,6 +109,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
   <img alt=" " src={useBaseUrl('docimg/deepin27.png')} />
 
-* 选择完模式后，安装就完成了。
+* 选择完模式后，安装就完成了
 
   <img alt=" " src={useBaseUrl('docimg/deepin28.png')} />
