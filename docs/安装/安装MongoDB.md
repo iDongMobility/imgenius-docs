@@ -26,7 +26,7 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 6. 按“Ctrl + C”退出。
 
-7. 运行“mongo.exe --port 27017 -u "userAdmin" -p "密码" --authenticationDatabase "admin"（注：端口与bin文件夹下mongod.cfg内容一致、用户名和密码与自行修改保存一致
+7. 运行“mongo.exe --port 27017 -u "userAdmin" -p "密码" --authenticationDatabase "admin"”（注：端口与bin文件夹下mongod.cfg内容一致、用户名和密码与自行修改保存一致
 
 8. 运行“use admin”。
 
