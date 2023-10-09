@@ -41,6 +41,26 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 **4. 验证RabbitMQ**，在IE中输入网址`“http://localhost:15672”`， 在UserName和Password分别输入admin和password，如果登录成功，表示安装成功。（如果已经验证忽略此步）
 
+## 启用MQTT插件
+
+* 启用rabbitmq中的mqtt插件，在开始菜单中以管理员模式启动cmd
+
+  <img alt=" " src={useBaseUrl('docimg/mqtt4202.png')} />
+
+* 分别输入以下命令：
+
+`rabbitmq-plugins enable rabbitmq_mqtt（开启   rabbitmq_mqtt 对应端口 1883）`
+
+  <img alt=" " src={useBaseUrl('docimg/mqtt4203.png')} />
+
+`rabbitmq-plugins enable rabbitmq_web_mqtt（开启   rabbitmq_web_mqtt 对应端口 15675）`
+
+  <img alt=" " src={useBaseUrl('docimg/mqtt4204.png')} />
+
+* 成功之后，在rabbitmq网站里可以看到，mqtt已启用
+
+  <img alt=" " src={useBaseUrl('docimg/mqtt4205.png')} />
+
 **附：**
 
 [安装](安装/安装.md)
@@ -49,4 +69,4 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 [安装 PostgresSQL](安装/安装PostgresSQL.md)
 
-[安装 RabbitMQ](安装/安装RabbitMQ.md)
+[安装 MongoDB](安装/安装MongoDB.md)
