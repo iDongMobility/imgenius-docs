@@ -17,6 +17,9 @@ jobs:
         with:
           persist-credentials: false
 
+      - name: yarn config set strict-ssl false
+        run: yarn config set strict-ssl false
+        
       - name: yarn install
         run: yarn install 
 
