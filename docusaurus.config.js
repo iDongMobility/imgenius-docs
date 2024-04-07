@@ -79,7 +79,12 @@ module.exports = {
         {
           to: 'docs/发布说明/发布记录',
           label: `发布记录`,
-          position: 'right',
+          position: 'left',
+        },
+        {
+          href: "https://userguide-miniag.idongmobility.com",
+          label: "报警助手",
+          position: "left"
         },
         {
           href: "http://www.idongmobility.com/index.php/zh/",
