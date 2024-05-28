@@ -67,6 +67,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 [安装 SQLServer](安装/安装SQLServer.md)
 
-[安装 PostgresSQL](安装/安装PostgresSQL.md)
+[安装 PostgreSQL](安装/安装PostgreSQL.md)
 
 [安装 MongoDB](安装/安装MongoDB.md)

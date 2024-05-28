@@ -9,7 +9,7 @@ module.exports = {
       '安装/系统要求',
       '安装/安装',
       '安装/安装SQLServer',
-      '安装/安装PostgresSQL',
+      '安装/安装PostgreSQL',
       '安装/安装MongoDB',
       '安装/安装RabbitMQ',
     ],
@@ -278,7 +278,7 @@ module.exports = {
     ],
     '信创专题': [
       '信创专题/OS的安装',
-      '信创专题/安装PostgresSQL',
+      '信创专题/安装PostgreSQL',
       '信创专题/安装MongoDB',
       '信创专题/安装RabbitMQ',
     ],
