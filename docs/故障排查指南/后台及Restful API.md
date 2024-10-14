@@ -4,6 +4,22 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <img alt=" " src={useBaseUrl('docimg/公司名称.png')} />
 
+## EOC登录显示今日计划获取失败没有授权，API日志中有读取授权出错信息
+
+* 日志错误信息为：
+
+`imgenius - 读取授权出错，错误信息为：The native library 'C:\Windows\Microsoft.NET\Framework\v4.0.30319\wminet_utils.dll' does not have all required functions. Please, update the .NET Framework`
+
+* 解决办法：
+
+  * 首先查看.NET Framework当前最高版本，打开日志中提示的文件，右键-属性-详细信息
+
+  <img alt=" " src={useBaseUrl('docimg/排查指南4401.png')} />
+
+  * 如果低于4.7.X，则需要安装4.7.X及以上，推荐安装.NET Framework4.7.2及以上版本。下载地址为`https://dotnet.microsoft.com/zh-cn/download/dotnet-framework/net472`，下载Developer pack及Language packs语言包，安装后重启系统即可。
+
+  <img alt=" " src={useBaseUrl('docimg/排查指南4402.png')} />
+
 ## Web端作业树增加模板显示
 
 ### 使用说明：
