@@ -87,7 +87,7 @@ module.exports = {
           position: "left"
         },
         {
-          href: "http://www.idongmobility.com/index.php/zh/",
+          href: "https://www.idongmobility.com/index.php/zh/",
           label: "艾动官网",
           position: "right"
         },
@@ -153,11 +153,11 @@ module.exports = {
           items: [
             {
               label: '客户故事',
-              href: 'http://www.idongmobility.com/index.php/zh/clients.html',
+              href: 'https://www.idongmobility.com/index.php/zh/clients.html',
             },
             {
               label: '联系我们',
-              href: 'http://www.idongmobility.com/index.php/zh/about.html',
+              href: 'https://www.idongmobility.com/index.php/zh/about.html',
             },
           ],
         },
